@@ -37,7 +37,7 @@ target_link_libraries( avdeccd jdksavdecc-c uvrawpkt uv)
 if(APPLE)
   target_link_libraries(avdeccd pcap)
 elseif(UNIX)
-  target_link_libraries(avdeccd pcap pthread)
+  target_link_libraries(avdeccd pcap pthread rt)
 endif()
 
 
