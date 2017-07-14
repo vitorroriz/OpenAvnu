@@ -115,7 +115,7 @@ EtherPort::EtherPort( PortInit_t *portInit ) :
 			operLogSyncInterval = 0;           // 1 second
 	}
 	else {
-		setAsCapable( false );
+		setAsCapable(true);
 
 		if ( getInitSyncInterval() == LOG2_INTERVAL_INVALID )
 			setInitSyncInterval( -3 );       // 125 ms

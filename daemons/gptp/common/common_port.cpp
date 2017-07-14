@@ -93,6 +93,9 @@ bool CommonPort::init_port( void )
 	port_identity.setClockIdentity(clock->getClockIdentity());
 	port_identity.setPortNumber(&ifindex);
 
+	//VITOR DEBUG: VITOR CODE - Initial GM = Myself to avoid bad broadc. of GM
+	clock->setGrandmasterClockIdentity(clock->getClockIdentity());
+
 	syncReceiptTimerLock = lock_factory->createLock(oslock_recursive);
 	syncIntervalTimerLock = lock_factory->createLock(oslock_recursive);
 	announceIntervalTimerLock = lock_factory->createLock(oslock_recursive);

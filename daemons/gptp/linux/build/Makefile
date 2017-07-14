@@ -127,6 +127,9 @@ ifeq ($(SYSTEMD_WATCHDOG),1)
 	HEADER_FILES += $(SRC_DIR)/watchdog.hpp
 endif
 
+CXX = arm-linux-gnueabihf-g++
+CC  = arm-linux-gnueabihf-gcc
+
 LDFLAGS_G += -lpthread -lrt
 
 CFLAGS = $(CFLAGS_G)
